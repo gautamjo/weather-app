@@ -1,0 +1,31 @@
+h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+}
+
+.col-md-6 {
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#icon-card-body {
+    background: #D1F2EB;
+}
+
+li.list-group-item {
+    border: 1px solid #F39C12;
+    font-family: 'Josefin Slab', serif;
+}
+
+li.list-group-item:hover {
+    background-color: #1E8449;
+    transition-duration: 0.5s;
+    transition-delay: 0.05s;
+}
+
+hr {
+    border-color: #1E8449;
+}
