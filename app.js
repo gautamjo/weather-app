@@ -1,6 +1,9 @@
+//init Storage class/object
+const storage = new Storage();
+// get stored location data
+weatherLocation = storage.getLocationData();
 // init weather class/object
-const weather = new Weather();
-
+const weather = new Weather(weatherLocation.country, weatherLocation.city);
 // init UI class/object
 const ui = new UI();
 
@@ -17,6 +20,8 @@ document.getElementById("w-change-btn").addEventListener("click", (e) => {
     //console.log(city);
     // changeLocation
     weather.changeLocation(country, city);
+    // set location in local storage
+    storage.setLocationData(country, city);
     // get and display weather
     getWeather();
     // close modal
@@ -37,7 +42,7 @@ function getWeather() {
     weather.getInternationalWeather()
         .then(data => {
             ui.paint(data);
-            console.log(data);
+            //console.log(data);
         })
         .catch(err => console.log(err));
     // begin animation

@@ -1,6 +1,6 @@
 class Weather {
     // create a constructor with default country, state and city value
-    constructor(country = "India", city = "Delhi") {
+    constructor(country, city) {
             this.apiKey = "c1679dde7922e10f";
             this.country = country;
             //this.state = state;
